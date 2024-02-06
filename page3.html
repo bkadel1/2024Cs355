@@ -8,24 +8,10 @@
   <body>
     <h1>Form Information</h1>
 
-    <script>
-      const urlData = new URLSearchParams(location.search);
-      const divEl = document.createElement("div");
-      document.body.appendChild(divEl);
-
-      const listEl = document.createElement("ol");
-
-      divEl.appendChild(listEl);
-
-      // const name = urlData.get("fullName")
-
-      for (const [key, value] of urlData) {
-        const list = document.createElement("li");
-        list.innerText = key + ": " + value;
-        listEl.appendChild(list);
-      }
-    </script>
     <a href="page2" class="home-button">Page2</a>
     <a href="index.html" class="home-button">Home</a>
+
+    <script src="script.js"></script>
+    <script src="resultsParse.js"></script>
   </body>
 </html>
