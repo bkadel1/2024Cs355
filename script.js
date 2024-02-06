@@ -1,14 +1,25 @@
-const $ =docmunet.querySelector.bind(document);
-$('darkBtn').addEventListener('click', toggleDark)
+const $ = document.querySelector.bind(document);
+
+$('.dark-mode-toggle').addEventListener('click', toggleDark)
 
 function toggleDark(){
     if($(':root').hasAttribute('dark-mode')){
         $(':root').removeAttribute('dark-mode');
+        localStorage.removeItem("dark-mode")
     }else{
-        $(':root').setAttribute('dark-mode', ture);
+        $(':root').setAttribute('dark-mode', true);
+        localStorage.setItem("dark-mode", true)
+
     }
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode === 'true') {
-        toggleDark();
-    }
+
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lsData = localStorage.getItem("dark-mode");
+    console.log({lsData})
+    if(lsData == 'true') {
+        $(':root').setAttribute('dark-mode', true);
+    } else {
+        $(':root').removeAttribute('dark-mode');
+    }
+})
