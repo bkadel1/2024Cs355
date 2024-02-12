@@ -1,0 +1,39 @@
+
+body{
+    background-image: url('grass.jpg');
+    background-size: cover;
+    
+}
+.container {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align:right;
+  }
+  
+  #autocomplete {
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  #imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  .home-button {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: lightyellow;
+    color:violet;
+    border-radius: 5px; 
+  }
