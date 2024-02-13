@@ -18,11 +18,11 @@ body{
   #imageContainer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 60px;
   }
   
   img {
-    max-width: 100%;
+    max-width: 160%;
     height: auto;
     display: block;
     margin: 10px auto;
